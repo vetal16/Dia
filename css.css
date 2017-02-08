@@ -35,6 +35,19 @@
     margin-top: 10px;
 
 }
+#form3{ 
+    width: 800px; 
+	height:350px;
+    padding: 50px;
+    background: rgba(220, 220, 220, 0.4);
+	border: 4px solid #20B2AA; 
+	border-radius: 10px;
+	margin-left: 150px;
+    margin-top: 30px;
+    text-align: justify-all;
+	font-size: 20px;
+
+}
    .btn{
     background: #20B2AA; 
     width: 40%;	
@@ -56,3 +69,6 @@
     margin-left: 50px;
     margin-top: 50px;
 }
+
+
+
