@@ -36,16 +36,16 @@
 
 }
 #form3{ 
-    width: 800px; 
-	height:350px;
-    padding: 50px;
+    width: 720px; 
+	height:480px;
+    padding: 10px;
     background: rgba(220, 220, 220, 0.4);
 	border: 4px solid #20B2AA; 
 	border-radius: 10px;
-	margin-left: 150px;
-    margin-top: 30px;
+	margin-left: 400px;
+    margin-top: 110px;
     text-align: justify-all;
-	font-size: 20px;
+	font-size: 21px;
 
 }
    .btn{
@@ -58,17 +58,6 @@
     margin-left: 70px;
     margin-top: 10px;
 }
-
-	.search-query {
-	border: 1px solid #20B2AA;
-    background: #ffffff ;
-    height: 24px; 
-    width: 250px; 
-    font-size: 13px;
-    font-family: Tahoma; 
-    margin-left: 50px;
-    margin-top: 50px;
-}
-
+ 
 
 
