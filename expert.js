@@ -70,7 +70,7 @@ function step()
 {
     var ans = parseFloat($("#current-answer").attr("value"));
     if (ans < 0 || ans > 100) {
-        alert("Неверный ввод!");
+        alert("Невірне введення!");
         return;
     }
     testSystem.processAnswer(ans);
@@ -139,15 +139,15 @@ function init()
     {
         $("#test").val(
             
-                "Определение пола\n" +
+                "Визначення полу\n" +
                 "\n" +
-                "Вы мальчик?\n"+
-                "Вы девочка?\n"+
+                "Ви хлопчик?\n"+
+                "Ви дівчинка?\n"+
                 "\n"   +
-                "Мальчик\n" +
+                "Хлопчик\n" +
                 "0.5 1) 1 0 2) 0 1\n" +
-                "Девочка\n"+
-                "0.5 2) 1 0 1) 0 1" 
+                "Дівчинка\n"+
+                "0.5 2) 1 0 1) 0 1"  
               );
 
 
@@ -258,7 +258,7 @@ Test.prototype.nextStep = function()
     this.questions.sort(sortQuestion);
     if (this.questions.length == 0 || this.complete)
     {
-        $("#current-question").html("Ознакомьтесь с решением системы. Вопросы закончены.");
+        $("#current-question").html("Ознайомтесь з рішенням системи.");
         $("#complete-answer").add("#current-answer").addClass("hide");
         return;
     }
