@@ -35,6 +35,58 @@
     </div>
     <div class="b-page-main">
         <textarea id="test" class=" b-input__area b-page-transition border-radius left-side" placeholder="Введіть сюди тест, а потім натисніть розпочати."></textarea>
+        Назва експертної системи:
+        <input id="inputFileNameToSaveAs" class="border-radius" placeholder="Введіть назву системи">
+         <p><button id='n' onclick="saveTextAsFile()" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable">Зберегти експертну систему</button></p>
+         <br><br>
+        <td> Завантажити експертну систему:</td><br>
+<div class="file-upload">
+     <label title="Натисніть <Редагувати> щоб відкрити файл">
+        <input name="file" type="file" id="fileToLoad" >
+        <span>Виберіть файл</span>
+     </label></div>
+
+        <button id="nm" title="Редагувати обраний файл" class="b-button b-page-shadows border-radius b-page-transition b-button-clickable" onclick="loadFileAsText()">Редагувати файл</button>
+
+               <script type="text/javascript">
+ 
+function saveTextAsFile()
+{
+    var textToSave = document.getElementById("test").value;
+    var textToSaveAsBlob = new Blob([textToSave], {type:"text/plain"});
+    var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+    var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+ 
+    var downloadLink = document.createElement("a");
+    downloadLink.download = fileNameToSaveAs;
+    downloadLink.innerHTML = "Download File";
+    downloadLink.href = textToSaveAsURL;
+    downloadLink.onclick = destroyClickedElement;
+    downloadLink.style.display = "none";
+    document.body.appendChild(downloadLink);
+ 
+    downloadLink.click();
+}
+ 
+function destroyClickedElement(event)
+{
+    document.body.removeChild(event.target);
+}
+ 
+function loadFileAsText()
+{
+    var fileToLoad = document.getElementById("fileToLoad").files[0];
+ 
+    var fileReader = new FileReader();
+    fileReader.onload = function(fileLoadedEvent) 
+    {
+        var textFromFileLoaded = fileLoadedEvent.target.result;
+        document.getElementById("test").value = textFromFileLoaded;
+    };
+    fileReader.readAsText(fileToLoad, "UTF-8");
+}
+ 
+</script>
         <div class="b-page-test-switch left-side">
 
         </div>
